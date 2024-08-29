@@ -6,7 +6,7 @@ import static java.lang.Integer.parseInt;
 
 class EntradaEvento {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         crearMatrizInformacion();
         //algo2
         //algo3
@@ -25,12 +25,12 @@ class EntradaEvento {
         return false;
     }
 
-   public static String verificarBoleto(String[][] m, int fila) {
+    public static String verificarBoleto(String[][] m, int fila) {
         if (m[fila][2] == null) {
             return "False";
         }
         return m[fila][2];
-   }
+    }
 
     public static boolean validarInvitados(String[][] m, int fila) {
         if (parseInt(m[fila][3]) > 2) { //Solo debe aplicar para invitados con entrada VIP
@@ -82,7 +82,7 @@ class EntradaEvento {
         System.out.println("Los aforos disponibles para general y para VIP son, respectivamente: ");
         int aforoGeneral = contarDisponibleGeneral(m);
         int aforoVip = contarDisponibleVip(m);
-        System.out.println("El aforo disponible es el siguiente: " +aforoGeneral "personas en la sala general y " +aforoVip "personas en sala VIP");
+        System.out.println("El aforo disponible es el siguiente: " + aforoGeneral, "personas en la sala general y " + aforoVip "personas en sala VIP");
     }
 
     public static void ingresarPersona(String[][] m, int fila) {
@@ -111,7 +111,10 @@ class EntradaEvento {
         return false;
     }
 
-    public static boolean removerPersona() {
-
+    public static void removerPersona(String[][] m, int fila) {
+        for (int columna = 0; columna < 3; columna++) {
+            m[fila][columna] = null;
+        }
+        m[fila][4] = "False";
     }
 }
