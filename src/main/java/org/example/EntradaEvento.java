@@ -56,7 +56,11 @@ class EntradaEvento {
 
     public static void ingresarPersona(String[][] m, int fila) {
         if ((m[fila][4]).toLowerCase() == "true") {
-
+            m[fila][4] = "False";
+        } else if ((m[fila][4]).toLowerCase() == "false") {
+            m[fila][4] = "true";
+        } else {
+            System.out.println("Información no válida");
         }
 
     }
