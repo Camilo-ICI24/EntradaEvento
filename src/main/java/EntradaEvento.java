@@ -1,15 +1,10 @@
-package org.example;
-
-import java.util.Objects;
-
 import static java.lang.Integer.parseInt;
 
 class EntradaEvento {
 
     public static void main(String[] args) {
         crearMatrizInformacion();
-        //algo2
-        //algo3
+
     }
 
     public static void crearMatrizInformacion() {
@@ -82,7 +77,8 @@ class EntradaEvento {
         System.out.println("Los aforos disponibles para general y para VIP son, respectivamente: ");
         int aforoGeneral = contarDisponibleGeneral(m);
         int aforoVip = contarDisponibleVip(m);
-        System.out.println("El aforo disponible es el siguiente: " + aforoGeneral, "personas en la sala general y " + aforoVip "personas en sala VIP");
+        System.out.println("El aforo disponible para la sala generales el siguiente: " + aforoGeneral);
+        System.out.println("El aforo disponible es el siguiente: " + aforoVip);
     }
 
     public static void ingresarPersona(String[][] m, int fila) {
